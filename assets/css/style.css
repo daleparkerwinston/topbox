@@ -1,0 +1,107 @@
+html, body {
+    position: relative;
+
+}
+
+body {
+    font-family: Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/*Size of widget*/
+.container {
+    width: 400px;
+    height: 200px;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+/*Header Text*/
+.In-Theaters {
+    width: 118.5px;
+    height: 20.5px;
+    font-size: 24px;
+    font-weight: 300;
+    color: #3b3f47;
+    margin-bottom: 0;
+}
+
+.Top-Movies-This-Week {
+    width: 149.5px;
+    height: 16.5px;
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    color: #6b6b6b;
+    margin-top: 10px;
+}
+
+/*View More Link*/
+.view-more {
+    width: 128px;
+    height: 16.5px;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    color: #276cf2;
+    float: right;
+    text-align: right;
+
+}
+
+/*Movie*/
+.movie-text {
+    float: left;
+    height: 156px;
+    width: 265px;
+    background-color: #f2f3f5;
+    padding: 12px;
+}
+
+.movie-image {
+    float: right;
+    text-align: right;
+}
+
+/*Movie Image Size*/
+.poster {
+    width: 105px;
+    height: 156px;
+}
+
+.movie-title {
+    height: 20px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.25;
+    letter-spacing: 0.4px;
+    margin-bottom: 10px;
+}
+
+.movie-description {
+    width: 206px;
+    height: 90px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.29;
+    letter-spacing: 0.5px;
+    color: #6b6b6b;
+    overflow: hidden;
+}
+
+/*Movie Rating*/
+.movie-rating {
+    position: absolute;
+    bottom: 30px;
+}
+
+.star {
+    width: 14px;
+    height: 14px;
+}

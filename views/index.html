@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="topBox">
+<head>
+    <meta charset="UTF-8">
+    <title>Top Box</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <!--Roboto Font-->
+    <link href="//fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!--AngularJS-->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+    <!--Swiper-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.css">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<!--Header-->
+
+<div class="container" ng-controller="MovieController as mc">
+    <div class="header">
+        <div class="">
+            <h1 class="In-Theaters">In Theaters</h1>
+
+        </div>
+        <div class="">
+            <h3 class="Top-Movies-This-Week">Top Movies This Week</h3>
+        </div>
+    </div>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide" ng-repeat="movie in mc.movies">
+                <a ng-href="{{movie.link}}" class="view-more" target="_blank">View More</a>
+                <div class="movie-text">
+                    <div class="movie-title">
+                        <p>{{movie.title}}</p>
+                    </div>
+                    <div class="movie-description">
+                        <p>{{movie.description}}</p>
+                    </div>
+                    <div class="rating-holder">
+                        <div class="movie-rating">
+                            <img class="star" src="../assets/images/star.svg"
+                                 ng-repeat="t in getTimes(movie.rating) track by $index">
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-image">
+                    <img class="poster" ng-src="{{movie.imageURL}}">
+                </div>
+            </div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+
+<script src="../app/app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true
+    });
+</script>
+
+</body>
+
+
+</html>
